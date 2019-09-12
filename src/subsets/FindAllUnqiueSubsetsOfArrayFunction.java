@@ -6,7 +6,7 @@ import java.util.List;
 
 public class FindAllUnqiueSubsetsOfArrayFunction {
     // Contain no duplicate subsets
-    // Does not need to be sorted, unless it include duplicate
+	// Does not need to be sorted, unless it contains duplicate input
     public List<List<Integer>> subsets(int[] nums) {
     	// Contain total of all subset
         List<List<Integer>> powerSet = new ArrayList<>();
