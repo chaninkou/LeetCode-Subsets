@@ -1,7 +1,6 @@
 package subsets;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class FindAllUnqiueSubsetsOfArrayFunction {
@@ -10,9 +9,6 @@ public class FindAllUnqiueSubsetsOfArrayFunction {
     public List<List<Integer>> subsets(int[] nums) {
     	// Contain total of all subset
         List<List<Integer>> powerSet = new ArrayList<>();
-        
-        // Sort the array first
-        Arrays.sort(nums);
         
         // Backtracking with 0 as starting point, pass in empty arraylist
         backtrack(powerSet, new ArrayList<>(), nums, 0);
