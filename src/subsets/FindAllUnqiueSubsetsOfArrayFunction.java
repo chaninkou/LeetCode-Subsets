@@ -17,12 +17,13 @@ public class FindAllUnqiueSubsetsOfArrayFunction {
     }
     
     private void backtrack(List<List<Integer>> subsets, List<Integer> tempList, int[] nums, int start){
+    	// Add the new set of subset to the total subsets, starting from []
     	// We create new ArrayList cause we don't want it to reference to it, we want a complete copy of it
     	subsets.add(new ArrayList<>(tempList));
     	
     	// We try to get all the set from start and then move on to the next element
     	for(int i = start; i < nums.length; i++){
-    		// Update the tempList, 
+    		// Add current element to tempList
     		tempList.add(nums[i]);
     		
     		// Reason why we using i + 1, so that we could backtrack the next element
