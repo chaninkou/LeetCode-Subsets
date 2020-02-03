@@ -10,6 +10,6 @@ public class Main {
 		
 		FindAllUnqiueSubsetsOfArrayFunction solution = new FindAllUnqiueSubsetsOfArrayFunction();
 		
-		System.out.println("Powerset without duplicate set: " +solution.subsets(nums));
+		System.out.println("Powerset without duplicate set: " +solution.subsets2(nums));
 	}
 }

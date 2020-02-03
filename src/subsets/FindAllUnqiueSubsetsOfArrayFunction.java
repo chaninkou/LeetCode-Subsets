@@ -36,4 +36,34 @@ public class FindAllUnqiueSubsetsOfArrayFunction {
     	}
     	
     }
+    
+    // A faster way to do it without backtrack, hard to master
+    public List<List<Integer>> subsets2(int[] nums){
+    	List<List<Integer>> result = new ArrayList<>();
+    	
+    	// Or use Collections.<Integer>emptyList()) for empty list
+    	result.add(new ArrayList<>());
+    	
+    	for(int i = 0; i < nums.length; i++){
+    		List<List<Integer>> whatToAdd = new ArrayList<>();
+    		
+    		// For each elements in our result array list
+    		for(List<Integer> subset : result){
+    			
+    			// Put the item in the list first
+    			List<Integer> copyOfsubset = new ArrayList<>(subset);
+    			
+    			// Add the input element
+    			copyOfsubset.add(nums[i]);
+    			
+    			// Finally add it to a list that will be store in result list after this loop finishes
+    			whatToAdd.add(copyOfsubset);
+    		}
+    		
+    		result.addAll(whatToAdd);
+    	}
+    	
+    	return result;
+    	
+    }
 }
