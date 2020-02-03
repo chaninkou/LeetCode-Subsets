@@ -10,12 +10,13 @@ public class FindAllUnqiueSubsetsOfArrayFunction {
     	// Contain total of all subset
         List<List<Integer>> subsets = new ArrayList<>();
         
-        // Backtracking with 0 as starting point since we stast from index 0
+        // Backtracking with 0 as starting point since we start from index 0
         backtrack(subsets, new ArrayList<>(), nums, 0);
         
         return subsets;
     }
     
+    // This is similar to permutation problem, but we want to add every recursive, and have the starting index without duplicates subset
     private void backtrack(List<List<Integer>> subsets, List<Integer> tempList, int[] nums, int start){
     	// Add the new set of subset to the total subsets, starting from []
     	// We create new ArrayList cause we don't want it to reference to it, we want a complete copy of it
