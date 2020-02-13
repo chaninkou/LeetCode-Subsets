@@ -22,6 +22,7 @@ public class FindAllUnqiueSubsetsOfArrayFunction {
     	// We create new ArrayList cause we don't want it to reference to it, we want a complete copy of it
     	subsets.add(new ArrayList<>(tempList));
     	
+    	// We don't need do anything to prevent duplicates since start will keep track of the last element
     	// We try to get all the set from start and then move on to the next element
     	for(int i = start; i < nums.length; i++){
     		// Add current element to tempList
