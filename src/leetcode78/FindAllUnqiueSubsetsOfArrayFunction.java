@@ -49,6 +49,9 @@ public class FindAllUnqiueSubsetsOfArrayFunction {
     		List<List<Integer>> whatToAdd = new ArrayList<>();
     		
     		// For each elements in our result array list
+    		// ex: [1]
+    		// [2], [1,2]
+    		// [3], [2,3], [1,2,3]
     		for(List<Integer> subset : result){
     			
     			// Put the item in the list first
